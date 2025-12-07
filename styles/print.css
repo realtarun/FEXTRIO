@@ -1,0 +1,170 @@
+@media print {
+  /* Hide non-essential elements */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Reset page margins and background */
+  @page {
+    margin: 0.5cm;
+    size: A4;
+  }
+
+  body {
+    background: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-size: 11px !important;
+  }
+
+  /* Ensure content fits on page */
+  * {
+    box-shadow: none !important;
+  }
+
+  /* Reduce overall padding */
+  .p-4, .p-6, .p-8 {
+    padding: 0.5rem !important;
+  }
+
+  .md\:p-8 {
+    padding: 0.5rem !important;
+  }
+
+  .mb-6 {
+    margin-bottom: 0.5rem !important;
+  }
+
+  .gap-4 {
+    gap: 0.25rem !important;
+  }
+
+  /* Statement header styling */
+  .statement-header {
+    border: 1px solid #d1d5db !important;
+    margin-bottom: 0.5rem !important;
+    padding: 0.5rem !important;
+    page-break-inside: avoid;
+  }
+
+  .statement-header p {
+    margin: 0 !important;
+    line-height: 1.3 !important;
+  }
+
+  .statement-header .text-lg {
+    font-size: 12px !important;
+  }
+
+  .statement-header .text-sm {
+    font-size: 10px !important;
+  }
+
+  /* Summary cards compact */
+  .bg-card {
+    padding: 0.5rem !important;
+  }
+
+  .text-2xl {
+    font-size: 14px !important;
+  }
+
+  .text-sm {
+    font-size: 10px !important;
+  }
+
+  /* Table styling for print */
+  .statement-table {
+    width: 100%;
+    border-collapse: collapse;
+    page-break-inside: auto;
+    font-size: 10px !important;
+  }
+
+  .statement-table table {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    table-layout: fixed;
+  }
+
+  .statement-table thead {
+    background: #f3f4f6 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .statement-table th,
+  .statement-table td {
+    border: 1px solid #d1d5db;
+    padding: 0.25rem 0.5rem !important;
+    font-size: 10px !important;
+    line-height: 1.2 !important;
+  }
+
+  .statement-table th {
+    font-weight: 600;
+    background: #f3f4f6 !important;
+    font-size: 10px !important;
+  }
+
+  /* Column widths for 3 columns */
+  .statement-table th:first-child,
+  .statement-table td:first-child {
+    width: 40%;
+  }
+
+  .statement-table th:nth-child(2),
+  .statement-table td:nth-child(2),
+  .statement-table th:nth-child(3),
+  .statement-table td:nth-child(3) {
+    width: 30%;
+  }
+
+  .statement-table tr:nth-child(even) {
+    background: #f9fafb !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Totals row emphasis */
+  .statement-table tbody tr:last-child {
+    border-top: 2px solid #374151 !important;
+    background: #e5e7eb !important;
+    font-weight: bold;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Prevent page breaks inside rows */
+  .statement-table tr {
+    page-break-inside: avoid;
+  }
+
+  /* Keep table header on each page */
+  .statement-table thead {
+    display: table-header-group;
+  }
+
+  /* Ensure proper text rendering */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Remove rounded corners for cleaner print */
+  .rounded-lg {
+    border-radius: 0 !important;
+  }
+
+  /* Hide overflow scroll indicator */
+  .overflow-x-auto {
+    overflow: visible !important;
+  }
+
+  /* Grid for summary - more compact */
+  .grid-cols-2,
+  .md\:grid-cols-4 {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+}
